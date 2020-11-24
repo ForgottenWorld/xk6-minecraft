@@ -1,0 +1,14 @@
+*
+!*/
+
+!main.go
+!go.mod
+!go.sum
+
+# include markdowns
+!LICENSE
+!README.md
+
+# include git important files
+!.gitignore
+!.github/**
