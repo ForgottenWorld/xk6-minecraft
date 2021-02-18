@@ -15,15 +15,15 @@ func init() {
 type Minecraft struct{}
 
 type Client struct {
+	cc *bot.Client
 }
 
 func (m *Minecraft) XClient(ctxPtr *context.Context) interface{} {
 	rt := common.GetRuntime(*ctxPtr)
-	return common.Bind(rt, &Client{}, ctxPtr)
+	return common.Bind(rt, &Client{cc: bot.NewClient()}, ctxPtr)
 }
 
 func (c *Client) JoinServer(address string) error {
-	cc := bot.NewClient()
-	return cc.JoinServer(address)
+	return c.cc.JoinServer(address)
 }
 
