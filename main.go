@@ -3,7 +3,7 @@ package minecraft
 import (
 	"context"
 
-	"github.com/Tnze/go-mc/bot"
+	"github.com/ForgottenWorld/go-mc/bot"
 	"github.com/loadimpact/k6/js/common"
 	"github.com/loadimpact/k6/js/modules"
 )
